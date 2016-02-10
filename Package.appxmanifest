@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
+  <Identity Name="13446AppMontage.MorrisMusicApp" Publisher="CN=DEBD062F-B6A0-4615-9220-98B65C614AAF" Version="1.1.0.10" />
+  <Properties>
+    <DisplayName>Morris Music App</DisplayName>
+    <PublisherDisplayName>App Montage</PublisherDisplayName>
+    <Logo>Assets\Background50x50.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.3.0</OSMinVersion>
+    <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="MorrisMusicStore.App">
+      <m2:VisualElements DisplayName="Morris Music Store" Square150x150Logo="Assets\Background150.png" Square30x30Logo="Assets\Resized-7AHP4.png" Description="MorrisMusicStore" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile Square310x310Logo="Assets\Background310x310.png" Wide310x150Logo="Assets\Background310.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+        <m2:ApplicationView MinWidth="default" />
+      </m2:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="MorrisMusicStore.App">
+          <BackgroundTasks>
+            <Task Type="audio" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="enterpriseAuthentication" />
+    <Capability Name="privateNetworkClientServer" />
+  </Capabilities>
+</Package>
